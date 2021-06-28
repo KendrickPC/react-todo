@@ -1,17 +1,19 @@
 import React from 'react';
 
-// export function Todo() {
-//   return null; 
-// }
+export const Todo = ({text, todo, todos, setTodos}) => {
+  // Event handler for deleting items
+  const deleteHandler = () => {
+    setTodos(todos.filter((el) => (el.id !== todo.id)))
+    console.log(todo);
+  }
 
-export const Todo = ({text}) => {
   return (
     <div className="todo">
       <li className="todo-item">{text}</li>
       <button className="complete-btn">
         <i className="fas fa-check"></i>
       </button>
-      <button className="trash-btn">
+      <button onClick={deleteHandler} className="trash-btn">
         <i className="fas fa-trash"></i>
       </button>
     </div>

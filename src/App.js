@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>MERN Stack List</h1>
+        <h1>MERN Stack</h1>
       </header>
       <Form 
         inputText={inputText}
@@ -18,8 +18,9 @@ function App() {
         setTodos={setTodos}
         setInputText={setInputText}
       />
-      <TodoList 
+      <TodoList
         todos={todos}
+        setTodos={setTodos}
       />
     </div>
   );
