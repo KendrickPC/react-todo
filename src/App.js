@@ -12,8 +12,15 @@ function App() {
       <header>
         <h1>MERN Stack List</h1>
       </header>
-      <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} />
-      <TodoList />
+      <Form 
+        inputText={inputText}
+        todos={todos}
+        setTodos={setTodos}
+        setInputText={setInputText}
+      />
+      <TodoList 
+        todos={todos}
+      />
     </div>
   );
 };
